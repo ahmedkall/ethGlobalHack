@@ -1,0 +1,124 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+
+  .border-border {
+    border-color: hsl(var(--border));
+  }
+
+  .font-body {
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .font-heading {
+    font-family: 'Manrope', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+.animated-background {
+  background: linear-gradient(270deg, #373a40, #8f9298, #181818, #ebe5e5);
+  background-size: 800% 800%;
+  animation: backgroundAnimation 15s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-button {
+  transition: transform 0.3s ease;
+}
+
+.animated-button:hover {
+  transform: scale(1.05);
+}
+
+.animated-image {
+  transition: transform 0.3s ease;
+}
+
+.animated-image:hover {
+  transform: scale(1.05);
+}
+
+.key-features-section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.key-features-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+.key-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.key-features-item {
+  text-align: center;
+}
+
+.key-features-item h3 {
+  margin-top: 1rem;
+}
+
+.key-features-item p {
+  margin-top: 0.5rem;
+  color: #888;
+}
