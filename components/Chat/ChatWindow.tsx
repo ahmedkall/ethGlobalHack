@@ -1,5 +1,5 @@
-import Footer from "./ChatFooter";
-import Header from "./ChatHeader";
+import ChatFooter from "./ChatFooter";
+import ChatHeader from "./ChatHeader";
 import Message from "./Message";
 import { Card, CardFooter, CardHeader } from "~~/components/ui/card";
 import { ScrollArea } from "~~/components/ui/scroll-area";
@@ -8,7 +8,7 @@ export default function ChatWindow() {
   return (
     <Card className="w-full max-w-[600px] rounded-2xl overflow-hidden">
       <CardHeader>
-        <Header />
+        <ChatHeader />
       </CardHeader>
       <ScrollArea className="h-[400px] border-b">
         <div className="p-4 grid gap-4">
@@ -30,7 +30,7 @@ export default function ChatWindow() {
         </div>
       </ScrollArea>
       <CardFooter>
-        <Footer />
+        <ChatFooter />
       </CardFooter>
     </Card>
   );

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Button } from "~~/components/ui/button";
+import { Button } from "~~/components/ui/Button";
 
 // Adjust the import path according to your file structure
 

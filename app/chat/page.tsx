@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import { Client, WalletType } from "@web3mq/client";
-import ChatWindow from "~~/components/chat/ChatWindow";
+import ChatWindow from "~~/components/Chat/ChatWindow";
 
 const VulnerabilityChat: NextPage = () => {
   const { primaryWallet } = useDynamicContext();
